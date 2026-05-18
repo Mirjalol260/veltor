@@ -1,0 +1,49 @@
+body{
+    background:#121212;
+    color:white;
+    font-family:Arial;
+    margin:0;
+    padding:20px;
+    transition:0.3s;
+}
+
+.light{
+    background:white;
+    color:black;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+
+select, #themeBtn{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+h1{
+    text-align:center;
+    color:gold;
+    font-size:50px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:350px;
+    margin:auto;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:gold;
+    font-size:20px;
+    cursor:pointer;
+}
