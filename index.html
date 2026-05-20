@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VELTOR</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELTOR</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="topbar">
+<div class="app">
+
+  <div class="topbar">
     <select id="language">
-        <option value="uz">🇺🇿 Uzbek</option>
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="en">🇺🇸 English</option>
+      <option value="uz">🇺🇿 Uzbek</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="en">🇺🇸 English</option>
     </select>
 
     <button id="themeBtn">🌙</button>
-</div>
+  </div>
 
-<h1>VELTOR</h1>
+  <div class="hero">
+    <h1>VELTOR</h1>
+    <p id="subtitle">Studentlar va hamma uchun aqlli yordamchi</p>
+  </div>
 
-<div class="menu">
-    <button id="student">🎓 Student yordam</button>
-    <button id="library">📚 Kutubxona</button>
-    <button id="chess">♟ Shaxmat</button>
-    <button id="checkers">⚫ Shashka</button>
-    <button id="profile">👤 Profil</button>
+  <div class="premium-card">
+    <h2>⭐ VELTOR Premium</h2>
+    <p id="premiumText">
+      AI yordamchi, kurs ishi, kitoblar va maxsus funksiyalar
+    </p>
+
+    <button id="premiumBtn">
+      Premium olish
+    </button>
+  </div>
+
+  <div class="grid">
+
+    <button class="card" id="student">
+      🎓 Student yordam
+    </button>
+
+    <button class="card" id="library">
+      📚 Kutubxona
+    </button>
+
+    <button class="card" id="ai">
+      🤖 AI yordamchi
+    </button>
+
+    <button class="card" id="docs">
+      📄 Hujjatlar
+    </button>
+
+    <button class="card" id="chess">
+      ♟ Shaxmat
+    </button>
+
+    <button class="card" id="checkers">
+      ⚫ Shashka
+    </button>
+
+    <button class="card" id="calc">
+      🧮 Hisob-kitob
+    </button>
+
+    <button class="card" id="profile">
+      👤 Profil
+    </button>
+
+  </div>
+
+  <div id="content" class="content">
+    Bo‘lim tanlang
+  </div>
+
 </div>
 
 <script src="script.js"></script>
