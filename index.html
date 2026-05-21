@@ -11,6 +11,8 @@
 <div class="app">
 
   <div class="topbar">
+    <button id="backBtn" class="back hidden">← Orqaga</button>
+
     <select id="language">
       <option value="uz">🇺🇿 Uzbek</option>
       <option value="ru">🇷🇺 Русский</option>
@@ -20,64 +22,57 @@
     <button id="themeBtn">🌙</button>
   </div>
 
-  <div class="hero">
-    <h1>VELTOR</h1>
-    <p id="subtitle">Studentlar va hamma uchun aqlli yordamchi</p>
+  <div id="homePage">
+    <div class="hero">
+      <h1>VELTOR</h1>
+      <p>Studentlar va hamma uchun aqlli yordamchi</p>
+    </div>
+
+    <div class="premium-card" id="premiumBtn">
+      <h2>⭐ VELTOR Premium</h2>
+      <p>AI yordamchi, kurs ishlari, kitoblar va maxsus xizmatlar</p>
+    </div>
+
+    <div class="grid">
+      <button class="card" data-page="student">🎓 Student yordam</button>
+      <button class="card" data-page="library">📚 Kutubxona</button>
+      <button class="card" data-page="ai">🤖 AI yordamchi</button>
+      <button class="card" data-page="docs">📄 Hujjatlar</button>
+      <button class="card" data-page="chess">♟ Shaxmat</button>
+      <button class="card" data-page="checkers">⚫ Shashka</button>
+      <button class="card" data-page="calc">🧮 Hisob-kitob</button>
+      <button class="card" data-page="profile">👤 Profil</button>
+    </div>
   </div>
 
-  <div class="premium-card">
-    <h2>⭐ VELTOR Premium</h2>
-    <p id="premiumText">
-      AI yordamchi, kurs ishi, kitoblar va maxsus funksiyalar
-    </p>
-
-    <button id="premiumBtn">
-      Premium olish
-    </button>
-  </div>
-
-  <div class="grid">
-
-    <button class="card" id="student">
-      🎓 Student yordam
-    </button>
-
-    <button class="card" id="library">
-      📚 Kutubxona
-    </button>
-
-    <button class="card" id="ai">
-      🤖 AI yordamchi
-    </button>
-
-    <button class="card" id="docs">
-      📄 Hujjatlar
-    </button>
-
-    <button class="card" id="chess">
-      ♟ Shaxmat
-    </button>
-
-    <button class="card" id="checkers">
-      ⚫ Shashka
-    </button>
-
-    <button class="card" id="calc">
-      🧮 Hisob-kitob
-    </button>
-
-    <button class="card" id="profile">
-      👤 Profil
-    </button>
-
-  </div>
-
-  <div id="content" class="content">
-    Bo‘lim tanlang
+  <div id="pageView" class="page hidden">
+    <h2 id="pageTitle"></h2>
+    <div id="pageContent"></div>
   </div>
 
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBUiTF9qjYx4WpVQoPgjKqEfLFjV1iFDUs",
+  authDomain: "veltor-57637.firebaseapp.com",
+  databaseURL: "https://veltor-57637-default-rtdb.firebaseio.com",
+  projectId: "veltor-57637",
+  storageBucket: "veltor-57637.firebasestorage.app",
+  messagingSenderId: "437164483852",
+  appId: "1:437164483852:web:6f2deda77e84a5b5879529",
+  measurementId: "G-HBKP7BBQ9T"
+};
+
+firebase.initializeApp(firebaseConfig);
+window.firebaseDB = firebase.database();
+</script>
+
+<script src="data.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
